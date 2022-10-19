@@ -85,7 +85,7 @@
         
     </div>
 
-    <div class="slider-dots">
+    <div class="slider-dots"> 
 
     </div>
 </div>
@@ -93,6 +93,11 @@
 
     {{--banner area end--}}
  {{--Category area start--}}
+
+ <div class="category">
+    
+ </div>
+
 
 
   {{--Category area end--}}
