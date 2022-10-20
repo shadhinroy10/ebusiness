@@ -86,6 +86,7 @@
     </div>
 
     <div class="slider-dots"> 
+    </div>
 
     </div>
 </div>
@@ -94,9 +95,26 @@
     {{--banner area end--}}
  {{--Category area start--}}
 
- <div class="category">
-    
+<section class="category">
+ <div class="container category__container">
+
+<div class="heading">
+    <h2 class="title">
+        Category
+    </h2>
+</div>
+
+<div class="category-area">
+    <div class="card">
+        <div class="image">
+            <img src="{{url('assets/frontend/images/laptop.png')}}" alt="">
+        </div>
+    </div>
+</div>
+
  </div>
+
+</section>
 
 
 
