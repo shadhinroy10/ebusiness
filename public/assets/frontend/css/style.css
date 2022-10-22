@@ -55,12 +55,12 @@ button {
 }
 
 section {
-    padding: 80px 0;
+    padding: 70px 0;
 
 }
 
 .container {
-    padding: 0 10%;
+    padding: 0 20%;
 }
 
 .text-center {
@@ -79,15 +79,25 @@ section {
     margin-top: 15px;
 }
 
+.mb-20 {
+    margin-bottom: 30px;
+}
+
 .grid-eight {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     gap: 20px;
 }
 
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 50px;
+}
+
 .grid-five {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 20px;
 }
 
@@ -300,4 +310,76 @@ section {
     font-weight: 500px;
 }
 
-/* category area start */
+/* category area end */
+
+/* footer area start */
+.footer {
+    background: #000;
+    color: var(--white-color);
+}
+
+.footer .widget a {
+    color: #666;
+}
+
+.footer .widget .footer-big-btn {
+    display: block;
+
+    padding: 10px 0;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, .1);
+}
+
+.widget .helpline-btn {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 30px;
+}
+
+.widget .helpline-btn i {
+    font-size: 20px;
+    line-height: 40px;
+    padding: 0 10px 0 20px;
+    /* margin-right: 20px; */
+    border-right: 1px solid #333;
+    color: var(--white-color);
+}
+
+.widget .helpline-btn h5 {
+    color: #FF7F31;
+    margin: 0;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: normal;
+}
+
+.widget .footer-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.widget .footer-menu ul li a {
+    font-size: 14px;
+}
+
+.widget .footer-menu ul li a:hover {
+    color: var(--primary-color);
+}
+
+.widget .address p {
+    font-size: 14px;
+    color: #666;
+}
+
+.widget .address p span {
+    display: block;
+    color: var(--white-color);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* footer area end */

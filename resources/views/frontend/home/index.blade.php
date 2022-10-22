@@ -289,6 +289,103 @@
   {{--footer area start--}}
 
 <section class="footer">
+    <div class="container footer__container">
+        <div class="footer-grid">
+
+            <div class="widget">
+                <h2 class="mb-20">Support</h2>
+                <a href="#" class="footer-big-btn"> 
+                    <div class="helpline-btn">
+                        <i class="fa-solid fa-phone"></i>
+                        <div class="text">
+                            <p>9Am - 8PM</p>
+                            <h5>0185168850</h5>
+                        </div>
+                    </div>
+
+                </a>
+                <a href="#" class="footer-big-btn"> 
+                    <div class="helpline-btn">
+                        <i class="fa-solid fa-phone"></i>
+                        <div class="text">
+                            <p>9Am - 8PM</p>
+                            <h5>0185168850</h5>
+                        </div>
+                    </div>
+
+                </a>
+
+            </div>
+
+            <div class="widget">
+                <h2 class="mb-20">About Us</h2>
+                <nav class="footer-menu">
+
+                    <ul>
+                        <li><a href="#">EMI Terms</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Star Point Policy</a></li>
+                        <li><a href="#">Brands</a></li>
+                        
+                    </ul>
+
+                </nav>
+
+            </div>
+
+            <div class="widget">
+                <h2 class="mb-20">About Us</h2>
+                <nav class="footer-menu">
+
+                    <ul>
+                        <li><a href="#">EMI Terms</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Star Point Policy</a></li>
+                        <li><a href="#">Brands</a></li>
+                        
+                    </ul>
+
+                </nav>
+
+            </div>
+
+
+            <div class="widget">
+                <h2 class="mb-20">About Us</h2>
+                <nav class="footer-menu">
+
+                    <ul>
+                        <li><a href="#">EMI Terms</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Star Point Policy</a></li>
+                        <li><a href="#">Brands</a></li>
+                        
+                    </ul>
+
+                </nav>
+
+            </div>
+            
+            <div class="widget">
+                <h2 class="mb-20">STAY CONNECTED</h2>
+                <div class="address">
+                    <p> <span>Star Tech & Engineering Ltd</span>
+                        6th floor, 28 Kazi Nazrul Islam Ave,Navana Zohura Square, Dhaka 1000</p>
+
+                        <div class="emai mt-15">
+                            <p>Email:
+                                <span>shadhinroy923@gmail.com</span>
+                            </p>
+                        </div>
+                </div>
+
+            </div>
+
+            
+
+        </div>
+
+    </div>
 
 
 </section>
