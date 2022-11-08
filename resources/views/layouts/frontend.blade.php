@@ -18,7 +18,7 @@
 </head>
 <body>
     {{--menu area start--}}
-    
+
 
         <div class="menu">
             <div class="container menu__container">
@@ -29,19 +29,19 @@
                 <nav class="navber">
                     <ul>
                         <li><a href="{{route('home')}}" class="{{ Route::is ('home') ? 'active':''}}">Home</a></li>
-                        <li><a href="#">Category</a></li>
+                        <li><a href="{{route('category')}}" class="{{Route::is('category')? 'active':''}}">Category</a></li>
                         <li><a href="#">Product</a></li>
                         <li><a href="#">Blog</a></li>
-                        <li><a href="#">About Us</a></li>
+                        <li><a href="{{route('about')}}" class="{{ Route::is ('about') ? 'active':''}}">About Us</a></li>
                         <li><a href="#">Contact Us</a></li>
-                        
+
                     </ul>
                 </nav>
 
                 <div class="menu__btn">
                     <a href="#" class="menu-btn">Login</a>
                     <a href="#" class="menu-btn" id="menu_btn"><i class="fa-solid fa-bars"></i></a>
-                    
+
                 </div>
 
             </div>
@@ -59,7 +59,7 @@
 
             <div class="widget">
                 <h2 class="mb-20">Support</h2>
-                <a href="#" class="footer-big-btn"> 
+                <a href="#" class="footer-big-btn">
                     <div class="helpline-btn">
                         <i class="fa-solid fa-phone"></i>
                         <div class="text">
@@ -69,7 +69,7 @@
                     </div>
 
                 </a>
-                <a href="#" class="footer-big-btn"> 
+                <a href="#" class="footer-big-btn">
                     <div class="helpline-btn">
                         <i class="fa-solid fa-phone"></i>
                         <div class="text">
@@ -91,7 +91,7 @@
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Star Point Policy</a></li>
                         <li><a href="#">Brands</a></li>
-                        
+
                     </ul>
 
                 </nav>
@@ -107,7 +107,7 @@
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Star Point Policy</a></li>
                         <li><a href="#">Brands</a></li>
-                        
+
                     </ul>
 
                 </nav>
@@ -124,13 +124,13 @@
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Star Point Policy</a></li>
                         <li><a href="#">Brands</a></li>
-                        
+
                     </ul>
 
                 </nav>
 
             </div>
-            
+
             <div class="widget">
                 <h2 class="mb-20">STAY CONNECTED</h2>
                 <div class="address">
@@ -146,7 +146,7 @@
 
             </div>
 
-            
+
 
         </div>
 
@@ -170,10 +170,10 @@
 
     <script>
 
-        $('#menu_btn').click(function (e) { 
+        $('#menu_btn').click(function (e) {
             e.preventDefault();
             $('.navber').toggleClass('show');
-            
+
         });
 $('.banner-slider').slick({
   dots: true,

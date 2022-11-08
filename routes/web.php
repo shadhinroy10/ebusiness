@@ -14,3 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [App\Http\Controllers\forntend\HomeController::class,'index'])->name('home');
+
+Route::get('/about', [App\Http\Controllers\forntend\AboutController::class,'index'])->name('about');
+
+Route::get('/category', [App\Http\Controllers\forntend\CategoryController::class,'index'])->name('category');
+
+Route::prefix('admin')->group(function () {
+
+
+    Route::get('/', [App\Http\Controllers\backend\HomeController::class, 'index'])->name('admin.dashboard');
+
+    Route::get('login', [App\Http\Controllers\backend\LoginController::class, 'showLoginForm'])->name('login');
+
+    Route::post('login',[App\Http\controllers\backend\LoginController::class, 'login'])->name('login.submit');
+});
