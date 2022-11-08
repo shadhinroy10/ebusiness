@@ -27,4 +27,6 @@ Route::prefix('admin')->group(function () {
     Route::get('login', [App\Http\Controllers\backend\LoginController::class, 'showLoginForm'])->name('login');
 
     Route::post('login',[App\Http\controllers\backend\LoginController::class, 'login'])->name('login.submit');
+
+    Route::post('logout',[App\Http\Controllers\backend\LoginController::class, 'logout'])->name('logout');
 });
