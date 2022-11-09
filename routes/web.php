@@ -29,4 +29,6 @@ Route::prefix('admin')->group(function () {
     Route::post('login',[App\Http\controllers\backend\LoginController::class, 'login'])->name('login.submit');
 
     Route::post('logout',[App\Http\Controllers\backend\LoginController::class, 'logout'])->name('logout');
+
+    Route::resource('category', App\Http\Controllers\backend\CategoryController::class);
 });

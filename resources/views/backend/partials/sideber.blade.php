@@ -15,7 +15,7 @@
                     <li class=active><a class="nav-link" href="index.html">Ecommerce Dashboard</a></li>
                 </ul>
             </li>
-            <li><a class="nav-link" href="blank.html"><i class="far fa-square"></i> <span>Blank Page</span></a></li>
+            <li><a class="nav-link" href="{{route('category.index')}}"><i class="far fa-square"></i> <span>Category</span></a></li>
         </ul>
     </aside>
 </div>
