@@ -75,6 +75,7 @@
 
 <script src="{{asset('assets/backend/js/custom.js')}}"></script>
 
+@yield('scripts')
 
 </body>
 </html>

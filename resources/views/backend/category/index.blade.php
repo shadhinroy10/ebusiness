@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">
                     <h4>Budget vs Sales</h4>
-                    <a href="{{route('category.create')}}" class=" btn btn-primary"><i class="fas fa-plus"></i>Add Now</a>
+                    <a href="{{route('category.create')}}" class=" btn btn-primary"><i class="fas fa-plus"></i>  Add Now</a>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -26,11 +26,21 @@
                             @if($categories->count() > 0)
                             @foreach($categories as $category)
                             <tr>
-                                <td>1</td>
-                                <td>Irwansyah Saputra</td>
-                                <td>2017-01-09</td>
-                                <td><div class="badge badge-success">Active</div></td>
-                                <td><a href="#" class="btn btn-secondary">Detail</a></td>
+                                <td>{{$loop->index + 1}}</td>
+                                <td>
+                                    <img src="{{url('upload/images', $category->image)}}" alt="">
+                                </td>
+                                <td>{{$category->name}}</td>
+                                <td>{{$category->slug}}</div></td>
+                                <td class="d-flex" style="gap: 10px">
+                                    <a href="{{route('category.edit',$category->id)}}" class="btn btn-info"><i class="fas fa-edit"></i> Edit</a>
+
+
+                                    <form action="">
+                                        <button type="submit" class="btn btn-danger"><i class="far fa-trash-alt"></i> Delete</button>
+                                    </form>
+
+                                </td>
                             </tr>
                             @endforeach
                             @else

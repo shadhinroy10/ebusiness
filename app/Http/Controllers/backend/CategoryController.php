@@ -46,7 +46,27 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|min:3|max:255',
+            'slug' => 'required|string|min:3|max:255|unique:categories',
+            'image'=>'required|image|mimes:jpeg,jpg,gif,png|max:2048',
+        ]);
+
+        $category = new Category();
+        $category->name = $request->name;
+        $category->slug = $request->slug;
+
+        if ($request->hasFile('image')){
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalName();
+            $filename = time().'-image'.$extension;
+            $file->move('upload/images/',$filename);
+            $category->image = $filename;
+        }
+        $category->save();
+
+        return redirect()->route('category.index')->with('success', 'New category has been added');
+
     }
 
     /**
@@ -68,7 +88,8 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $category = Category::findOrFail(intval($id));
+        return view('backend.category.edit', compact('category'));
     }
 
     /**
@@ -80,7 +101,38 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $category =Category::findOrFail(intval($id));
+
+        if ($category->slug==$request->slug){
+            $request->validate([
+                'name' => 'required|string|min:3|max:255',
+                'slug' => 'required|string|min:3|max:255',
+                'image'=>'nullable|image|mimes:jpeg,jpg,gif,png|max:2048',
+            ]);
+        }else{
+            $request->validate([
+                'name' => 'required|string|min:3|max:255',
+                'slug' => 'required|string|min:3|max:255|unique:categories',
+                'image'=>'nullable|image|mimes:jpeg,jpg,gif,png|max:2048',
+            ]);
+
+        }
+
+
+
+        $category->name = $request->name;
+        $category->slug = $request->slug;
+
+        if ($request->hasFile('image')){
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalName();
+            $filename = time().'-image'.$extension;
+            $file->move('upload/images/',$filename);
+            $category->image = $filename;
+        }
+        $category->save();
+
+        return redirect()->route('category.index')->with('success', 'category has been Updated');
     }
 
     /**
