@@ -31,13 +31,17 @@
                                     <img src="{{url('upload/images', $category->image)}}" alt="">
                                 </td>
                                 <td>{{$category->name}}</td>
-                                <td>{{$category->slug}}</div></td>
-                                <td class="d-flex" style="gap: 10px">
-                                    <a href="{{route('category.edit',$category->id)}}" class="btn btn-info"><i class="fas fa-edit"></i> Edit</a>
+                                <td>{{$category->slug}}</td>
+                                <td >
 
 
-                                    <form action="">
-                                        <button type="submit" class="btn btn-danger"><i class="far fa-trash-alt"></i> Delete</button>
+
+                                    <form action="{{route('category.destroy', $category->id)}}" method="post">
+                                        @csrf
+                                        @method('Delete')
+                                        <a href="{{route('category.edit',$category->id)}}" class="btn btn-info"><i class="fas fa-edit"></i> Edit</a>
+
+                                        <button type="submit" class="btn btn-danger" onclick="return confirm('Do you want to delete')"><i class="far fa-trash-alt"></i> Delete</button>
                                     </form>
 
                                 </td>

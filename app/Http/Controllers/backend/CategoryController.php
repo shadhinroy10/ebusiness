@@ -54,6 +54,7 @@ class CategoryController extends Controller
 
         $category = new Category();
         $category->name = $request->name;
+
         $category->slug = $request->slug;
 
         if ($request->hasFile('image')){
@@ -143,6 +144,9 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $category = Category::findOrFail(intval($id));
+        $category->delete();
+
+        return redirect()->route('category.index')->with('sucess','Category has been deleted successfully');
     }
 }

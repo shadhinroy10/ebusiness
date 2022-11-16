@@ -31,4 +31,6 @@ Route::prefix('admin')->group(function () {
     Route::post('logout',[App\Http\Controllers\backend\LoginController::class, 'logout'])->name('logout');
 
     Route::resource('category', App\Http\Controllers\backend\CategoryController::class);
+
+    Route::resource('product', App\Http\Controllers\backend\ProductController::class);
 });

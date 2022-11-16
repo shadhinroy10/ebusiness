@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="{{asset('assets/backend/modules/fontawesome/css/all.min.css')}}">
 
     <!-- CSS Libraries -->
-    <link rel="stylesheet" href="{{asset('assets/backend/modules/jqvmap/dist/jqvmap.min.css')}}">
+
     <link rel="stylesheet" href="{{asset('assets/backend/modules/summernote/summernote-bs4.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/backend/modules/owlcarousel2/dist/assets/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/backend/modules/owlcarousel2/dist/assets/owl.theme.default.min.css')}}">
+    <link rel="stylesheet" href=" {{asset('assets/backend/modules/dropify/css/dropify.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/backend/modules/select2/dist/css/select2.min.css')}}">
 
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{asset('assets/backend/css/style.css')}}">
@@ -62,12 +62,16 @@
 <script src="{{asset('assets/backend/modules/popper.js')}}"></script>
 <script src="{{asset('assets/backend/modules/tooltip.js')}}"></script>
 <script src="{{asset('assets/backend/modules/bootstrap/js/bootstrap.min.js')}}"></script>
-<script src="{{asset('assets/backend/modules/nicescroll/jquery.n icescroll.min.js')}}"></script>
+<script src="{{asset('assets/backend/modules/nicescroll/jquery.nicescroll.min.js')}}"></script>
 <script src="{{asset('assets/backend/modules/moment.min.js')}}"></script>
 <script src="{{asset('assets/backend/js/stisla.js')}}"></script>
 
 <!-- JS Libraies -->
 <script src="{{asset('assets/backend/modules/summernote/summernote-bs4.js')}}"></script>
+
+<script src="{{asset('assets/backend/modules/dropify/js/dropify.js')}}"></script>
+
+<script src="{{asset('assets/backend/modules/select2/dist/js/select2.full.min.js')}}"></script>
 
 
 <!-- Template JS File -->
