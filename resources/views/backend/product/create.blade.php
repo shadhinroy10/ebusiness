@@ -46,10 +46,10 @@
 
                         <div class="form-group">
                             <label for="Description">Description</label>
-                            <textarea name="" class="summernote" id="description"></textarea>
+                            <textarea name="description" class="summernote" id="description"></textarea>
 
-                            @if($errors->has('Description'))
-                                <small style="color: red">{{$errors->first('Description')}} </small>
+                            @if($errors->has('description'))
+                                <small style="color: red">{{$errors->first('description')}} </small>
                             @endif
                         </div>
 
@@ -61,8 +61,8 @@
                                     <option value="{{$category->id}}">{{ $category->name }}</option>
                                 @endforeach
                             </select>
-                            @if($errors->has('Description'))
-                                <small style="color: red">{{$errors->first('Description')}} </small>
+                            @if($errors->has('category->id'))
+                                <small style="color: red">{{$errors->first('category->id')}} </small>
                             @endif
                         </div>
 

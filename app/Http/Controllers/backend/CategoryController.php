@@ -147,6 +147,6 @@ class CategoryController extends Controller
         $category = Category::findOrFail(intval($id));
         $category->delete();
 
-        return redirect()->route('category.index')->with('sucess','Category has been deleted successfully');
+        return redirect()->route('category.index')->with('success','Category has been deleted successfully');
     }
 }

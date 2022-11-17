@@ -28,7 +28,7 @@ class ProductController extends Controller
     public function index()
     {
         $Products = Product::orderBy('id','DESC')->get();
-        return view('backend.product.index', compact('products'));
+        return view('backend.product.index', compact('Products'));
     }
 
     /**
@@ -38,7 +38,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $categories = Category::orderBy('name', 'ASC')->get();
+        $categories = Category::orderBy('name','ASC')->get();
        return view('backend.product.create', compact('categories'));
 
 
@@ -52,7 +52,8 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-//        $product = new Product();
+        $product = new Product();
+
         $request->validate([
             'name' => 'required|string|min:3|max:255',
             'slug' => 'required|string|min:3|max:255|unique:products',
@@ -75,7 +76,7 @@ class ProductController extends Controller
         }
 
         Product::create($input);
-//        $product->save($input);
+
         return redirect()->route('product.index')->with('success', 'New product has been added successfully');
     }
 

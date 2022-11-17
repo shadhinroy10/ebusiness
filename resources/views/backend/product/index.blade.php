@@ -18,37 +18,39 @@
                                 <th>#</th>
                                 <th>image</th>
                                 <th>Name</th>
+                                <th>Slug</th>
                                 <th>SKU</th>
-                                <th>price</th>
-                                <th>Actual price</th>
+                                <th>Price</th>
+                                <th>Actual Price</th>
+                                <th>Category</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
-                            @if($products->count() > 0)
-                                @foreach($products as $product)
+                            @if($Products->count() >0)
+                                @foreach($Products as $product)
                                     <tr>
                                         <td>{{$loop->index + 1}}</td>
                                         <td>
-                                            <img src="{{url('upload/images', $product->image)}}" alt="">
+                                            <img style="width: 100px" src="{{url('upload/images', $product->image)}}" alt="">
                                         </td>
                                         <td>{{$product->name}}</td>
+                                        <td>{{$product->slug}}</td>
                                         <td>{{$product->sku}}</td>
                                         <td>{{$product->price}}</td>
                                         <td>{{$product->actual_price}}</td>
                                         <td>{{$product->category['name']}}</td>
-                                    </td>
+                                        <td >
 
 
 
+                                            <form action="{{route('category.destroy', $product->id)}}" method="post">
+                                                @csrf
+                                                @method('Delete')
+                                                <a href="{{route('category.edit',$product->id)}}" class="btn btn-info"><i class="fas fa-edit"></i> Edit</a>
 
-                                        <form action="{{route('category.destroy', $product->id)}}" method="post">
-                                            @csrf
-                                            @method('Delete')
-                                            <a href="{{route('category.edit',$product->id)}}" class="btn btn-info"><i class="fas fa-edit"></i> Edit</a>
-
-                                            <button type="submit" class="btn btn-danger" onclick="return confirm('Alrt')"><i class="far fa-trash-alt"></i> Delete</button>
-                                        </form>
+                                                <button type="submit" class="btn btn-danger" onclick="return confirm('Do you want to delete')"><i class="far fa-trash-alt"></i> Delete</button>
+                                            </form>
 
                                         </td>
                                     </tr>
