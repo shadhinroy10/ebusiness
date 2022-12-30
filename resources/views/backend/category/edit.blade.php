@@ -30,8 +30,9 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="">image</label>
-                            <input type="file" name="image" id="image" class="form-control">
+                            <label for="">Image</label>
+{{--                            <input type="file" name="image" id="image" class="" >--}}
+                            <input type="file" name="image" id="image" data-default-file="{{url('upload/images', $category->image)}}">
                             @if($errors->has('image'))
                                 <small style="color: red">{{$errors->first('image')}} </small>
                             @endif
@@ -57,6 +58,7 @@
             Text = Text.replace(/[^a-zA-Z0-9]+/g,'-');
             $("#slug").val(Text);
         });
+        $('#image').dropify();
     </script>
 
 @endsection

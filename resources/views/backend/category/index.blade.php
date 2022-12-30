@@ -28,7 +28,7 @@
                             <tr>
                                 <td>{{$loop->index + 1}}</td>
                                 <td>
-                                    <img src="{{url('upload/images', $category->image)}}" alt="">
+                                    <img src="{{url('upload/images', $category->image)}}" style="width: 100px" alt="">
                                 </td>
                                 <td>{{$category->name}}</td>
                                 <td>{{$category->slug}}</td>

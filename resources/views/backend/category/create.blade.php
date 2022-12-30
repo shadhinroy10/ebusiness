@@ -30,7 +30,7 @@
 
                         <div class="form-group">
                             <label for="">image</label>
-                            <input type="file" name="image" id="image" class="form-control">
+                            <input type="file" name="image" id="image" class="" >
                             @if($errors->has('image'))
                                 <small style="color: red">{{$errors->first('image')}} </small>
                             @endif
@@ -56,6 +56,8 @@
             Text = Text.replace(/[^a-zA-Z0-9]+/g,'-');
             $("#slug").val(Text);
         });
+
+        $('#image').dropify();
     </script>
 
 @endsection

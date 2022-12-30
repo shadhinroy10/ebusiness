@@ -29,8 +29,8 @@
                 <nav class="navber">
                     <ul>
                         <li><a href="{{route('home')}}" class="{{ Route::is ('home') ? 'active':''}}">Home</a></li>
-                        <li><a href="{{route('category')}}" class="{{Route::is('category')? 'active':''}}">Category</a></li>
-                        <li><a href="#">Product</a></li>
+                        <li><a href="{{route('web.category.index')}}" class="{{Route::is('category.index')? 'active':''}}">Category</a></li>
+                        <li><a href="{{route('web.product.index')}}" class="{{Route::is('web.product.index')? 'active': ''}}" >Products</a></li>
                         <li><a href="#">Blog</a></li>
                         <li><a href="{{route('about')}}" class="{{ Route::is ('about') ? 'active':''}}">About Us</a></li>
                         <li><a href="#">Contact Us</a></li>
@@ -39,7 +39,13 @@
                 </nav>
 
                 <div class="menu__btn">
-                    <a href="#" class="menu-btn">Login</a>
+                    @if(Auth::user())
+                        <a href="{{route('user.profile')}}" class="menu-btn">My Account</a>
+                        <a href="{{route('user.logout')}}" class="menu-btn">Logout</a>
+                    @else
+                    <a href="{{route('user.login')}}" class="menu-btn">Login</a>
+                    @endif
+
                     <a href="#" class="menu-btn" id="menu_btn"><i class="fa-solid fa-bars"></i></a>
 
                 </div>
@@ -187,6 +193,7 @@ $('.banner-slider').slick({
   appendDots:'.slider-dots',
 });
     </script>
+    @yield('script')
 
 <script src="https://kit.fontawesome.com/abc51e59fa.js" crossorigin="anonymous"></script>
 </body>

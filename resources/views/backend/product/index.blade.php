@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">
                     <h4>Budget vs Sales</h4>
-                    <a href="{{route('category.create')}}" class=" btn btn-primary"><i class="fas fa-plus"></i>  Add Now</a>
+                    <a href="{{route('product.create')}}" class=" btn btn-primary"><i class="fas fa-plus"></i>  Add Now</a>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -32,7 +32,7 @@
                                     <tr>
                                         <td>{{$loop->index + 1}}</td>
                                         <td>
-                                            <img style="width: 100px" src="{{url('upload/images', $product->image)}}" alt="">
+                                            <img style="width: 90px" src="{{url('upload/images', $product->image)}}" alt="">
                                         </td>
                                         <td>{{$product->name}}</td>
                                         <td>{{$product->slug}}</td>
@@ -44,10 +44,10 @@
 
 
 
-                                            <form action="{{route('category.destroy', $product->id)}}" method="post">
+                                            <form action="{{route('product.destroy', $product->id)}}" method="post">
                                                 @csrf
                                                 @method('Delete')
-                                                <a href="{{route('category.edit',$product->id)}}" class="btn btn-info"><i class="fas fa-edit"></i> Edit</a>
+                                                <a href="{{route('product.edit', $product->id)}}" class="btn btn-info"><i class="fas fa-edit"></i> Edit</a>
 
                                                 <button type="submit" class="btn btn-danger" onclick="return confirm('Do you want to delete')"><i class="far fa-trash-alt"></i> Delete</button>
                                             </form>

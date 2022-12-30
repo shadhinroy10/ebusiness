@@ -4,7 +4,7 @@
 
     {{--banner area start--}}
 
-   
+
     <div class="banner">
         <div class="container banner__container">
             <div class="slider-area">
@@ -12,7 +12,7 @@
         <div class="banner-slider">
             <div class="slider-item">
 
-            
+
                 <div class="banner-area">
                     <h2>Top Sell</h2>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo laudantium soluta fugit autem, quasi sunt voluptatum porro.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo laudantium soluta fugit autem, quasi sunt voluptatum porro.</p>
@@ -20,11 +20,11 @@
             </div>
 
         </div>
-        
+
 
         <div class="slider-item">
 
-            
+
             <div class="banner-area">
                 <h2>Top Sell</h2>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo laudantium soluta fugit autem, quasi sunt voluptatum porro.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo laudantium soluta fugit autem, quasi sunt voluptatum porro.</p>
@@ -33,13 +33,13 @@
 
     </div>
 
-        
+
     </div>
 
-    
+
 </div>
 
-<div class="slider-dots"> 
+<div class="slider-dots">
 </div>
 
 </div>
@@ -59,114 +59,22 @@
 </div>
 
 <div class="category-area grid-eight">
-<div class="card text-center">
-    <a href="#">
-        <div class="p-40">
-    <div class="image">
-        <img src="{{url('assets/frontend/images/laptop.png')}}" alt="">
-    </div>
-    <div class="card-body text-center">
-        <p> All Laptop </p>
-    </div>
-</div>
-</a>
-</div>
 
-<div class="card text-center">
-    <a href="#">
-        <div class="p-40">
-    <div class="image">
-        <img src="{{url('assets/frontend/images/laptop.png')}}" alt="">
+    @foreach($categories as $category)
+    <div class="card text-center">
+        <a href="{{route('web.category.show', $category->slug)}}">
+            <div class="p-40">
+        <div class="image">
+         <img src="{{url('upload/images',$category->image)}}" alt="">
+     </div>
+     <div class="card-body text-center">
+        <p> {{$category->name}} </p>
+        </div>
+        </div>
+        </a>
     </div>
-    <div class="card-body text-center">
-        <p> All Laptop </p>
-    </div>
-</div>
-</a>
-</div>
+    @endforeach
 
-
-<div class="card text-center">
-    <a href="#">
-        <div class="p-40">
-    <div class="image">
-        <img src="{{url('assets/frontend/images/laptop.png')}}" alt="">
-    </div>
-    <div class="card-body text-center">
-        <p> All Laptop </p>
-    </div>
-</div>
-</a>
-</div>
-
-
-<div class="card text-center">
-    <a href="#">
-        <div class="p-40">
-    <div class="image">
-        <img src="{{url('assets/frontend/images/laptop.png')}}" alt="">
-    </div>
-    <div class="card-body text-center">
-        <p> All Laptop </p>
-    </div>
-</div>
-</a>
-</div>
-
-
-<div class="card text-center">
-    <a href="#">
-        <div class="p-40">
-    <div class="image">
-        <img src="{{url('assets/frontend/images/laptop.png')}}" alt="">
-    </div>
-    <div class="card-body text-center">
-        <p> All Laptop </p>
-    </div>
-</div>
-</a>
-</div>
-
-
-<div class="card text-center">
-    <a href="#">
-        <div class="p-40">
-    <div class="image">
-        <img src="{{url('assets/frontend/images/laptop.png')}}" alt="">
-    </div>
-    <div class="card-body text-center">
-        <p> All Laptop </p>
-    </div>
-</div>
-</a>
-</div>
-
-
-<div class="card text-center">
-    <a href="#">
-        <div class="p-40">
-    <div class="image">
-        <img src="{{url('assets/frontend/images/laptop.png')}}" alt="">
-    </div>
-    <div class="card-body text-center">
-        <p> All Laptop </p>
-    </div>
-</div>
-</a>
-</div>
-
-<div class="card text-center">
-    <a href="#">
-        <div class="p-40">
-    <div class="image">
-        <img src="{{url('assets/frontend/images/laptop.png')}}" alt="">
-    </div>
-    <div class="card-body text-center">
-        <p> All Laptop </p>
-    </div>
-</div>
-</a>
-</div>
 </div>
 
 </div>
@@ -187,156 +95,34 @@
         </h2>
     </div>
         <div class="product-area grid-five">
+            @foreach($products as $product)
             <div class="card">
                 <div class="image">
-                    <img src="{{url('assets/frontend/images/kraken.jpg')}}" alt="">
+                    <img src="{{url('upload/images', $product->image)}}" alt="">
                 </div>
 
                 <div class="card-body p-20">
 
-                    <p> <a href="#">HP Pavilion 15-eg1678TU Core i5 11th Gen 15.6" FHD Laptop</a> </p>
+                    <p> <a href="{{route('web.product.show', $product->slug)}}">{{$product->name}}</a> </p>
                     <div class="row mt-15">
                         <div class="cloumn-half">
-                            <p class="price ">Price: £1112</p>
+                            <p class="price ">{{$product->price}}</p>
                         </div>
 
                         <div class="cloumn-half">
-                            <p class="sku text-right"> <a href="#">SKU: Baaauu</a> </p>
+                            <p class="sku text-right"> <a href="#">{{$product->sku}}</a> </p>
                         </div>
                     </div>
 
                 </div>
             </div>
+            @endforeach
 
-            <div class="card">
-                <div class="image">
-                    <img src="{{url('assets/frontend/images/kraken.jpg')}}" alt="">
-                </div>
-
-                <div class="card-body p-20">
-
-                    <p> <a href="#">HP Pavilion 15-eg1678TU Core i5 11th Gen 15.6" FHD Laptop</a> </p>
-                    <div class="row mt-15">
-                        <div class="cloumn-half">
-                            <p class="price ">Price: £1112</p>
-                        </div>
-
-                        <div class="cloumn-half">
-                            <p class="sku text-right"> <a href="#">SKU: Baaauu</a> </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="image">
-                    <img src="{{url('assets/frontend/images/kraken.jpg')}}" alt="">
-                </div>
-
-                <div class="card-body p-20">
-
-                    <p> <a href="#">HP Pavilion 15-eg1678TU Core i5 11th Gen 15.6" FHD Laptop</a> </p>
-                    <div class="row mt-15">
-                        <div class="cloumn-half">
-                            <p class="price ">Price: £1112</p>
-                        </div>
-
-                        <div class="cloumn-half">
-                            <p class="sku text-right"> <a href="#">SKU: Baaauu</a> </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="image">
-                    <img src="{{url('assets/frontend/images/kraken.jpg')}}" alt="">
-                </div>
-
-                <div class="card-body p-20">
-
-                    <p> <a href="#">HP Pavilion 15-eg1678TU Core i5 11th Gen 15.6" FHD Laptop</a> </p>
-                    <div class="row mt-15">
-                        <div class="cloumn-half">
-                            <p class="price ">Price: £1112</p>
-                        </div>
-
-                        <div class="cloumn-half">
-                            <p class="sku text-right"> <a href="#">SKU: Baaauu</a> </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="image">
-                    <img src="{{url('assets/frontend/images/kraken.jpg')}}" alt="">
-                </div>
-
-                <div class="card-body p-20">
-
-                    <p> <a href="#">HP Pavilion 15-eg1678TU Core i5 11th Gen 15.6" FHD Laptop</a> </p>
-                    <div class="row mt-15">
-                        <div class="cloumn-half">
-                            <p class="price ">Price: £1112</p>
-                        </div>
-
-                        <div class="cloumn-half">
-                            <p class="sku text-right"> <a href="#">SKU: Baaauu</a> </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="image">
-                    <img src="{{url('assets/frontend/images/kraken.jpg')}}" alt="">
-                </div>
-
-                <div class="card-body p-20">
-
-                    <p> <a href="#">HP Pavilion 15-eg1678TU Core i5 11th Gen 15.6" FHD Laptop</a> </p>
-                    <div class="row mt-15">
-                        <div class="cloumn-half">
-                            <p class="price ">Price: £1112</p>
-                        </div>
-
-                        <div class="cloumn-half">
-                            <p class="sku text-right"> <a href="#">SKU: Baaauu</a> </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="image">
-                    <img src="{{url('assets/frontend/images/kraken.jpg')}}" alt="">
-                </div>
-
-                <div class="card-body p-20">
-
-                    <p> <a href="#">HP Pavilion 15-eg1678TU Core i5 11th Gen 15.6" FHD Laptop</a> </p>
-                    <div class="row mt-15">
-                        <div class="cloumn-half">
-                            <p class="price ">Price: £1112</p>
-                        </div>
-
-                        <div class="cloumn-half">
-                            <p class="sku text-right"> <a href="#">SKU: Baaauu</a> </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
 
         </div>
 
-        
+
+
  </div>
 
 </section>

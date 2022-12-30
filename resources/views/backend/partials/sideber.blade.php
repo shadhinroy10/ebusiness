@@ -21,11 +21,13 @@
                 <a class="nav-link" href="{{route('admin.dashboard')}}"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
             </li>
 
-            <li class="dropdown active {{Route::is('category.*') ? 'active' : ''}}">
+            <li class="{{Route::is('category.*') ? 'active' : ''}}">
                 <a class="nav-link" href="{{route('category.index')}}"><i class="far fa-square"></i> <span>Category</span></a>
             </li>
 
-            <li class="dropdown active {{Route::is('product.*') ? 'active' : ''}}">
+
+
+            <li class="dropdown {{Route::is('product.*') ? 'active' : ''}}">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Product</span></a>
                 <ul class="dropdown-menu">
                     <li class="{{Route::is('product.create') ? 'active' : ''}}">
@@ -35,6 +37,11 @@
                         <a class="nav-link" href="{{route('product.index')}}">All Product</a>
                     </li>
                 </ul>
+            </li>
+
+
+            <li class=" {{Route::is('admin.order.index') ? 'active' : ''}}">
+                <a class="nav-link" href="{{route('admin.order.index')}}"><i class="far fa-square"></i> <span>Orders</span></a>
             </li>
         </ul>
     </aside>

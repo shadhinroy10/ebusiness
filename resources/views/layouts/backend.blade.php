@@ -72,6 +72,7 @@
 <script src="{{asset('assets/backend/modules/dropify/js/dropify.js')}}"></script>
 
 <script src="{{asset('assets/backend/modules/select2/dist/js/select2.full.min.js')}}"></script>
+<script src="{{asset('assets/backend/modules/sweetalert/sweetalert.min.js')}}"></script>
 
 
 <!-- Template JS File -->
@@ -80,6 +81,30 @@
 <script src="{{asset('assets/backend/js/custom.js')}}"></script>
 
 @yield('scripts')
+
+@if(Session::has('success'))
+<script>
+    swal({
+        title: "Good job!",
+        text: "{{Session::get('success')}}",
+        icon: "success",
+        button: "Done!",
+    });
+
+</script>
+@endif
+
+@if(Session::has('error'))
+    <script>
+        swal({
+            title: "Something Went Wrong!",
+            text: "{{Session::get('error')}}",
+            icon: "error",
+            button: "Ok!",
+        });
+
+    </script>
+@endif
 
 </body>
 </html>

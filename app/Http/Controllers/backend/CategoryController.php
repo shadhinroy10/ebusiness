@@ -6,7 +6,7 @@ use App\Models\Category;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class CategoryController extends Controller
+class  CategoryController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -145,7 +145,12 @@ class CategoryController extends Controller
     public function destroy($id)
     {
         $category = Category::findOrFail(intval($id));
-        $category->delete();
+
+        if ($category->products->count()>0){
+            return redirect()->route('category.index')->with('error','Category can not be deleted');
+        }else{
+            $category->delete();
+        }
 
         return redirect()->route('category.index')->with('success','Category has been deleted successfully');
     }

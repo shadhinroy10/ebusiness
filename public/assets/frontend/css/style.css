@@ -38,7 +38,7 @@ img {
     width: 100px;
 }
 
-.im {
+.img {
     width: 500px;
 }
 
@@ -52,10 +52,17 @@ img {
     border-radius: 10px;
 }
 
+.btn-block{
+    width: 100%;
+    background: black;
+    padding: 15px;
+}
+
 button {
     border: none;
     outline: none;
     cursor: pointer;
+    font-size: 17px;
 }
 
 section {
@@ -121,6 +128,11 @@ section {
 
 .cloumn-half {
     flex-basis: 50%;
+}
+
+.desc-hide{
+    display: none;
+    transition: all .3s linear ;
 }
 
 .row {
@@ -318,18 +330,54 @@ section {
     border-bottom: 3px solid rgba(55, 73, 187, .03);
 }
 
-.product .price {
+.product.price {
     color: var(--primary-color);
 
-    font-weight: 500px;
+    font-weight: 500;
 }
 
-.product .sku a {
+.product.sku a {
     color: var(--primary-color);
-    font-weight: 500px;
+    font-weight: 500;
 }
 
-/* category area end */
+/* product area end */
+
+/*single product  start*/
+
+.single-product img{
+    width: 100%;
+}
+.single-product{
+    display: flex;
+    gap: 30px;
+
+
+}
+
+.single-product .left_card{
+    flex-basis: 40%;
+    height:100%;
+}
+
+.single-product .right_card{
+    flex-basis: 60%;
+    height:100%;
+}
+
+/*single product  end*/
+
+/*Single product details start*/
+
+
+.details_nav ul{
+    display: flex;
+    gap: 20px;
+    justify-content: left;
+}
+
+
+/*Single product details start*/
 
 /* footer area start */
 .footer {
@@ -401,7 +449,43 @@ section {
     line-height: 1.7;
 }
 
+/*login start*/
+.login{
+    padding: 150px;
+}
 
+.login-card{
+    width: 30%;
+    box-shadow: 0 0 5px #c4c4c4;
+    padding: 40px;
+    margin: auto;
+}
+
+.login-card h3{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group{
+    margin-bottom: 20px;
+}
+
+.form-input{
+    width: 100%;
+    padding: 10px;
+}
+.form-input:focus{
+    outline-color: #FF7F31;
+}
+
+/*order area start*/
+.order .card{
+    width: 600px;
+    margin: 0 auto;
+}
+/*order area end*/
+
+/*login area end*/
 
 /* footer area end */
 
